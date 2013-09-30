@@ -1,0 +1,25 @@
+@import "compass";
+@import "variables";
+@import "mixins";
+
+@import "icons/social/*.png";
+
+#footer {
+	width: 100%;
+	border: 1px solid;
+
+	.social {
+
+		header h1 {
+			text-align: center;
+			@include fontSize(32px, 16px);
+		}
+		.icons{
+			margin:0 auto;
+			width: 50%;
+			img.social-icon {
+				@include float(left, 10%);
+			}	
+		}
+	}
+}

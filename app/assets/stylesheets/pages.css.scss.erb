@@ -1,0 +1,60 @@
+@import "variables";
+@import "mixins";
+@import "compass";
+
+/* Global CSS */
+html, body {
+	width: 100%;
+	font-family: helvetica, arial, times, serif;
+	font-size: 100%;
+}
+
+body {
+	background: url('<%= asset_path('backgrounds/captain-greed.png') %>') repeat-y top;
+	background-size:100%;
+
+}
+
+img {
+	max-width: 100%;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 25px auto;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto; 
+}
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+.downloadButton {
+	background: green;
+	width: 300px;
+	height: 75px;
+	@include fontSize(32px, 16px);
+	@include rounded-corner(10px);
+}
+#main {
+	width: 100%;
+
+	section {
+		border: 1px solid black;
+		height: 500px;
+		overflow: hidden;
+		position: relative;
+
+
+		header h1 {
+			text-align: center;
+			@include fontSize(32px, 16px);
+		}
+	}
+}

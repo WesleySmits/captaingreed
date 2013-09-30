@@ -1,0 +1,41 @@
+@import "variables";
+@import "mixins";
+
+#main{
+	section {
+		background:#fff;
+	}
+	section#promo {
+		p {
+			width: 50%;
+			margin: 0 auto;
+		}
+		div.full{
+			width: 300px;
+			margin: 25px auto 10px;
+
+			.downloadButton {
+				position: relative;
+				top: 200px;	
+			}
+		}
+	}
+	section.first-block {
+
+	}
+	section#usp{
+		.selling-point {
+			width: 30%;
+			border: 1px solid;
+			text-align: center;
+			@include float(left, 2.5%);
+
+			h1 {
+				@include fontSize(20px)
+			}
+		}
+		.selling-point.last {
+			@include float(right, 2%);
+		}
+	}
+}
