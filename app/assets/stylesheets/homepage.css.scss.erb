@@ -4,20 +4,45 @@
 #main{
 	section {
 		background:#fff;
+
+		@media screen and (min-width: $break-small) {
+			height: 130px;
+	  }
+	  @media screen and (min-width: $break-medium) {
+			height: 195px;
+	  }
+	  @media screen and (min-width: $break-large) {
+			height: 350px;
+	  }
+	  @media screen and (min-width: $break-xlarge) {
+			height: 350px;
+	  }
 	}
 	section#promo {
-		p {
-			width: 50%;
-			margin: 0 auto;
-		}
-		div.full{
-			width: 300px;
-			margin: 25px auto 10px;
+		@media screen and (min-width: $break-small) {
+			background: url('<%= asset_path('backgrounds/small-content.png') %>') no-repeat;
+			background-size:100%;
+	  }
+	  @media screen and (min-width: $break-medium) {
+			background: url('<%= asset_path('backgrounds/medium-content.png') %>') no-repeat;
+			background-size:100%;
+	  }
+	  @media screen and (min-width: $break-large) {
+			background: url('<%= asset_path('backgrounds/large-content.png') %>') no-repeat;
+			background-size:100%;
+	  }
+	  @media screen and (min-width: $break-xlarge) {
+			background: url(<%= asset_path 'backgrounds/extra-large-content.png' %>) no-repeat;
+			background-size:100%;
+	  }
 
-			.downloadButton {
-				position: relative;
-				top: 200px;	
-			}
+	  position: relative;
+	
+		.downloadButton {
+			position: absolute;
+			bottom: 0px;
+			left: 50%;
+			margin-left: -115px;	
 		}
 	}
 	section.first-block {
@@ -31,7 +56,9 @@
 			@include float(left, 2.5%);
 
 			h1 {
-				@include fontSize(20px)
+				@include fontSize(20px);
+				@include captainFont();
+
 			}
 		}
 		.selling-point.last {

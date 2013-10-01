@@ -26,4 +26,14 @@ CaptainGreed::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'captaingreed.com',
+    user_name:            'captaingreedgame@gmail.com',
+    password:             '4[T^+88$/Ff84.7Z7n399?4&+*.q.{>7U9[<U@64N%3928#&7D',
+    authentication:       'plain',
+    enable_starttls_auto: true  }
 end

@@ -4,11 +4,31 @@
 
 #header {
 	width: 100%;
-	background: $grey;
+	@media screen and (min-width: $break-small) {
+		background: url('<%= asset_path('backgrounds/small-header.png') %>') no-repeat;
+		background-size:100%;
+	}
+	@media screen and (min-width: $break-medium) {
+		background: url('<%= asset_path('backgrounds/medium-header.png') %>') no-repeat;
+		background-size:100%;
+	}
+	@media screen and (min-width: $break-large) {
+		background: url('<%= asset_path('backgrounds/large-header.png') %>') no-repeat;
+		background-size:100%;
+	}
+	@media screen and (min-width: $break-xlarge) {
+		background: url(<%= asset_path 'backgrounds/xlarge-header.png' %>) no-repeat;
+		background-size:100%;
+	}
 
 	h1 {
 		@include fontSize(20px, 16px);
 		@include float(left);
+
+		.home-link {
+			text-decoration: none;
+			color: #000;
+		}
 	}
 	nav {
 		@include float(right);

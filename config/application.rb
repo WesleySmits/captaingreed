@@ -19,5 +19,20 @@ module CaptainGreed
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "captaingreed.com",
+      :user_name            => "captaingreedgame@gmail.com",
+      :password             => "4[T^+88$/Ff84.7Z7n399?4&+*.q.{>7U9[<U@64N%3928#&7D",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+      :host => "captaingreed.com"
+    }
+
   end
 end

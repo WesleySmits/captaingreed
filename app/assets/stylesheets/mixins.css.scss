@@ -13,6 +13,12 @@
 	font-size: $target/$context * 1em;
 }
 
+@mixin captainFont() {
+  color: #FFC500;
+  text-transform: uppercase;
+  
+}
+
 @mixin rounded-corner($amt: 5px) {
 	-webkit-border-radius: $amt;
 	-moz-border-radius: $amt;

@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.0.1'
 # Compass is a mixin library for SASS
 gem "compass-rails", "~> 2.0.alpha.0"
 
+# Mail_Form for sending e-mails straight from forms
+gem 'mail_form'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
